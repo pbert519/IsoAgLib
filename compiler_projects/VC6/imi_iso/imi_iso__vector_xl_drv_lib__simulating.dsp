@@ -1,24 +1,24 @@
-# Microsoft Developer Studio Project File - Name="imi_iso_rte" - Package Owner=<4>
+# Microsoft Developer Studio Project File - Name="imi_iso" - Package Owner=<4>
 # Microsoft Developer Studio Generated Build File, Format Version 6.00
 # ** NICHT BEARBEITEN **
 
 # TARGTYPE "Win32 (x86) Console Application" 0x0103
 
-CFG=imi_iso_rte - Win32 Debug
+CFG=imi_iso - Win32 Debug
 !MESSAGE Dies ist kein gültiges Makefile. Zum Erstellen dieses Projekts mit NMAKE
 !MESSAGE verwenden Sie den Befehl "Makefile exportieren" und führen Sie den Befehl
 !MESSAGE
-!MESSAGE NMAKE /f "imi_iso_rte.mak".
+!MESSAGE NMAKE /f "imi_iso.mak".
 !MESSAGE
 !MESSAGE Sie können beim Ausführen von NMAKE eine Konfiguration angeben
 !MESSAGE durch Definieren des Makros CFG in der Befehlszeile. Zum Beispiel:
 !MESSAGE
-!MESSAGE NMAKE /f "imi_iso_rte.mak" CFG="imi_iso_rte - Win32 Debug"
+!MESSAGE NMAKE /f "imi_iso.mak" CFG="imi_iso - Win32 Debug"
 !MESSAGE
 !MESSAGE Für die Konfiguration stehen zur Auswahl:
 !MESSAGE
-!MESSAGE "imi_iso_rte - Win32 Release" (basierend auf  "Win32 (x86) Console Application")
-!MESSAGE "imi_iso_rte - Win32 Debug" (basierend auf  "Win32 (x86) Console Application")
+!MESSAGE "imi_iso - Win32 Release" (basierend auf  "Win32 (x86) Console Application")
+!MESSAGE "imi_iso - Win32 Debug" (basierend auf  "Win32 (x86) Console Application")
 !MESSAGE
 
 # Begin Project
@@ -28,7 +28,7 @@ CFG=imi_iso_rte - Win32 Debug
 CPP=cl.exe
 RSC=rc.exe
 
-!IF  "$(CFG)" == "imi_iso_rte - Win32 Release"
+!IF  "$(CFG)" == "imi_iso - Win32 Release"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -41,17 +41,17 @@ RSC=rc.exe
 # PROP Intermediate_Dir "Release"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /c
-# ADD CPP /nologo /W3 /GX /O2 /I "C:\STLport\stlport" /I "..\..\.." /I "..\..\..\xgpl_src" /I "..\..\..\IsoAgLib_Examples" /I "D:\Development\VectorInformatik\CANLIB\dll" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "SYSTEM_PC_VC" /D "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso_rte.h" /D "HWTYPE_VIRTUAL" /YX /FD /TP /c
-# ADD BASE RSC /l 0x407 /d "NDEBUG" /d "SYSTEM_PC_VC" /d "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso_rte.h" /d "HWTYPE_VIRTUAL"
-# ADD RSC /l 0x407 /d "NDEBUG" /d "SYSTEM_PC_VC" /d "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso_rte.h" /d "HWTYPE_VIRTUAL"
+# ADD CPP /nologo /W3 /GX /O2 /I "C:\STLport\stlport" /I "..\..\.." /I "..\..\..\xgpl_src" /I "..\..\..\IsoAgLib_Examples" /I "D:\Development\XL Driver Library\bin" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "SYSTEM_PC_VC" /D "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso.h" /D "XL_HWTYPE_VIRTUAL" /YX /FD /TP /c
+# ADD BASE RSC /l 0x407 /d "NDEBUG" /d "SYSTEM_PC_VC" /d "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso.h" /d "XL_HWTYPE_VIRTUAL"
+# ADD RSC /l 0x407 /d "NDEBUG" /d "SYSTEM_PC_VC" /d "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso.h" /d "XL_HWTYPE_VIRTUAL"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /machine:I386
-# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /machine:I386 /libpath:"D:\Development\VectorInformatik\CANLIB\dll"
+# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib /nologo /subsystem:console /machine:I386 /libpath:""D:\Development\XL Driver Library\bin""
 
-!ELSEIF  "$(CFG)" == "imi_iso_rte - Win32 Debug"
+!ELSEIF  "$(CFG)" == "imi_iso - Win32 Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -65,22 +65,22 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /GZ  /c
-# ADD CPP /nologo /W3 /Gm /GX /ZI /Od /I "C:\STLport\stlport" /I "..\..\.." /I "..\..\..\xgpl_src" /I "..\..\..\IsoAgLib_Examples" /I "D:\Development\VectorInformatik\CANLIB\dll" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS"  /D "SYSTEM_PC_VC" /D "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso_rte.h" /D "HWTYPE_VIRTUAL" /YX /FD /TP /GZ /c
-# ADD BASE RSC /l 0x407 /d "_DEBUG" /d "SYSTEM_PC_VC" /d "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso_rte.h" /d "HWTYPE_VIRTUAL"
-# ADD RSC /l 0x407 /d "_DEBUG" /d "SYSTEM_PC_VC" /d "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso_rte.h" /d "HWTYPE_VIRTUAL"
+# ADD CPP /nologo /W3 /Gm /GX /ZI /Od /I "C:\STLport\stlport" /I "..\..\.." /I "..\..\..\xgpl_src" /I "..\..\..\IsoAgLib_Examples" /I "D:\Development\XL Driver Library\bin" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS"  /D "SYSTEM_PC_VC" /D "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso.h" /D "XL_HWTYPE_VIRTUAL" /YX /FD /TP /GZ /c
+# ADD BASE RSC /l 0x407 /d "_DEBUG" /d "SYSTEM_PC_VC" /d "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso.h" /d "XL_HWTYPE_VIRTUAL"
+# ADD RSC /l 0x407 /d "_DEBUG" /d "SYSTEM_PC_VC" /d "PRJ_USE_AUTOGEN_CONFIG=config_imi_iso.h" /d "XL_HWTYPE_VIRTUAL"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept /libpath:"D:\Development\VectorInformatik\CANLIB\dll"
+# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept /libpath:""D:\Development\XL Driver Library\bin""
 
 !ENDIF
 
 # Begin Target
 
-# Name "imi_iso_rte - Win32 Release"
-# Name "imi_iso_rte - Win32 Debug"
+# Name "imi_iso - Win32 Release"
+# Name "imi_iso - Win32 Debug"
 # Begin Group "Quellcodedateien"
 
 # PROP Default_Filter "cc;cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
@@ -134,6 +134,10 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\util\impl\util_funcs.cpp
 
 # Begin Source File
 SOURCE=..\..\..\xgpl_src\IsoAgLib\util\impl\canpkg_c.cpp
+# End Source File
+
+# Begin Source File
+SOURCE=..\..\..\xgpl_src\IsoAgLib\util\impl\cancustomer_c.cpp
 # End Source File
 
 # Begin Source File
@@ -229,6 +233,10 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectstring_c.cpp
 # End Source File
 
 # Begin Source File
+SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectauxiliaryfunction_c.cpp
+# End Source File
+
+# Begin Source File
 SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectmeter_c.cpp
 # End Source File
 
@@ -254,6 +262,10 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectinputnumber_c.c
 
 # Begin Source File
 SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectkey_c.cpp
+# End Source File
+
+# Begin Source File
+SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectauxiliaryinput_c.cpp
 # End Source File
 
 # Begin Source File
@@ -293,7 +305,7 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\hal\pc\can\hal_can_interface.cpp
 # End Source File
 
 # Begin Source File
-SOURCE=..\..\..\xgpl_src\IsoAgLib\hal\pc\can\target_extension_can_w32_vector_canlib.cpp
+SOURCE=..\..\..\xgpl_src\IsoAgLib\hal\pc\can\target_extension_can_w32_vector_xl_drv_lib.cpp
 # End Source File
 
 # Begin Source File
@@ -337,7 +349,15 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\driver\system\impl\system_c.cpp
 # End Source File
 
 # Begin Source File
-SOURCE=D:\Development\VectorInformatik\CANLIB\dll\vcandm32.lib
+SOURCE=D:\Development\XL
+# End Source File
+
+# Begin Source File
+SOURCE=Driver
+# End Source File
+
+# Begin Source File
+SOURCE=Library\bin\vxlapi.lib
 # End Source File
 
 # End Group
@@ -474,7 +494,7 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\util\icanpkg_c.h
 # End Source File
 
 # Begin Source File
-SOURCE=..\..\..\xgpl_src\IsoAgLib\util\symbol_shortening.h
+SOURCE=..\..\..\xgpl_src\IsoAgLib\util\compiler_adoption.h
 # End Source File
 
 # Begin Source File
@@ -558,6 +578,10 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectpicturegraphic_
 # End Source File
 
 # Begin Source File
+SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectauxiliaryinput_c.h
+# End Source File
+
+# Begin Source File
 SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectline_c.h
 # End Source File
 
@@ -595,6 +619,10 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectnumbervariable_
 
 # Begin Source File
 SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectoutputnumber_c.h
+# End Source File
+
+# Begin Source File
+SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectauxiliaryfunction_c.h
 # End Source File
 
 # Begin Source File
@@ -639,6 +667,10 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectworkingset_c.h
 
 # Begin Source File
 SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\impl\vtobjectfontattributes_c.h
+# End Source File
+
+# Begin Source File
+SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\ivtobjectauxiliaryfunction_c.h
 # End Source File
 
 # Begin Source File
@@ -687,6 +719,10 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\ivtobjectpicturegraphic_c.h
 
 # Begin Source File
 SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\ivtobjectdatamask_c.h
+# End Source File
+
+# Begin Source File
+SOURCE=..\..\..\xgpl_src\IsoAgLib\comm\ISO_Terminal\ivtobjectauxiliaryinput_c.h
 # End Source File
 
 # Begin Source File
@@ -910,7 +946,15 @@ SOURCE=..\..\..\xgpl_src\IsoAgLib\driver\system\isystem_c.h
 # End Source File
 
 # Begin Source File
-SOURCE=D:\Development\VectorInformatik\CANLIB\dll\VCanD.h
+SOURCE=D:\Development\XL
+# End Source File
+
+# Begin Source File
+SOURCE=Driver
+# End Source File
+
+# Begin Source File
+SOURCE=Library\bin\vxlapi.h
 # End Source File
 
 # End Group

@@ -1121,7 +1121,7 @@ vt2iso_c::init(
   bool ab_externalize,
   bool ab_createAll,
   bool ab_disableContainmentRules,
-  DOMBuilder* ap_parser,
+  DOMLSParser* ap_parser,
   bool ab_verbose,
   const std::string& arcstr_outDirName,
   const std::string& arcstr_namespace,
@@ -5490,18 +5490,18 @@ int main(int argC, char* argV[])
   // Instantiate the DOM parser.
   static const XMLCh gLS[] = { chLatin_L, chLatin_S, chNull };
   DOMImplementation *impl = DOMImplementationRegistry::getDOMImplementation(gLS);
-  DOMBuilder  *parser = ((DOMImplementationLS*)impl)->createDOMBuilder(DOMImplementationLS::MODE_SYNCHRONOUS, 0);
+  DOMLSParser  *parser = ((DOMImplementationLS*)impl)->createLSParser(DOMImplementationLS::MODE_SYNCHRONOUS, 0);
 
-  parser->setFeature(XMLUni::fgDOMNamespaces, doNamespaces);
-  parser->setFeature(XMLUni::fgXercesSchema, doSchema);
-  parser->setFeature(XMLUni::fgXercesSchemaFullChecking, schemaFullChecking);
-
-  if (valScheme == AbstractDOMParser::Val_Auto)        parser->setFeature(XMLUni::fgDOMValidateIfSchema, true);
-  else if (valScheme == AbstractDOMParser::Val_Never)  parser->setFeature(XMLUni::fgDOMValidation, false);
-  else if (valScheme == AbstractDOMParser::Val_Always) parser->setFeature(XMLUni::fgDOMValidation, true);
-
+  parser->getDomConfig()->canSetParameter(XMLUni::fgDOMNamespaces, doNamespaces);
+  parser->getDomConfig()->canSetParameter(XMLUni::fgXercesSchema, doSchema);
+  parser->getDomConfig()->canSetParameter(XMLUni::fgXercesSchemaFullChecking, schemaFullChecking);
+/*
+  if (valScheme == AbstractDOMParser::Val_Auto)        parser->getDomConfig()->canSetParameter(XMLUni::fgDOMValidateIfSchema, true);
+  else if (valScheme == AbstractDOMParser::Val_Never)  parser->getDomConfig()->canSetParameter(XMLUni::fgDOMValidation, false);
+  else if (valScheme == AbstractDOMParser::Val_Always) parser->getDomConfig()->canSetParameter(XMLUni::fgDOMValidation, true);
+*/
     // enable datatype normalization - default is off
-  parser->setFeature(XMLUni::fgDOMDatatypeNormalization, true);
+  parser->getDomConfig()->canSetParameter(XMLUni::fgDOMDatatypeNormalization, true);
 
   std::string xsdLocation (argV[0]);
   std::string::size_type separatorPos = xsdLocation.find_last_of ("/\\");
@@ -5509,10 +5509,10 @@ int main(int argC, char* argV[])
     xsdLocation = xsdLocation.substr (0, separatorPos+1);
   xsdLocation += "vt2iso.xsd";
   XMLCh* propertyValue = XMLString::transcode(xsdLocation.c_str());
-  parser->setProperty(XMLUni::fgXercesSchemaExternalNoNameSpaceSchemaLocation, propertyValue);
+  parser->getDomConfig()->canSetParameter(XMLUni::fgXercesSchemaExternalNoNameSpaceSchemaLocation, propertyValue);
 
   // And create our error handler and install it
-  parser->setErrorHandler(pc_vt2iso);
+  //parser->setErrorHandler(pc_vt2iso);
 
   const bool cb_initSuccess = pc_vt2iso->init (str_cmdlineName, &dictionary, externalize, createAll, b_disableContainmentRules, parser, verbose, str_outDir, str_namespace, b_accept_unknown_attributes, b_silentMode, b_pedanticMode, str_outFileName, str_searchPath, str_langPrefix, str_definesPrefix, str_baseClass, str_baseClassHdr );
 

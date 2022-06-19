@@ -15,7 +15,7 @@
 #define VT2ISO_H
 
 #include <xercesc/dom/DOMErrorHandler.hpp>
-#include <xercesc/dom/DOMBuilder.hpp>
+#include <xercesc/dom/DOMLSParser.hpp>
 #include <xercesc/util/XMLString.hpp>
 #include <iostream>
 #include <set>
@@ -232,7 +232,7 @@ public:
     bool ab_externalize,
     bool ab_createAll,
     bool ab_disableContainmentRules,
-    DOMBuilder* ap_parser,
+    DOMLSParser* ap_parser,
     bool ab_verbose,
     const std::string& arcstr_outDir,
     const std::string& arcstr_namespace,
@@ -501,7 +501,7 @@ private:
   // used in processElement(...)
   char* m_nodeName;
 
-  DOMBuilder* parser;
+    DOMLSParser* parser;
 #ifdef USE_SPECIAL_PARSING_PROP
   SpecialParsingUsePropTag_c* pc_specialParsingPropTag;
 #else

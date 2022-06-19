@@ -11,16 +11,17 @@
 #include <IsoAgLib/comm/Part7_ApplicationLayer/itracmove_c.h>
 #include <IsoAgLib/comm/Part7_ApplicationLayer/itracpto_c.h>
 
-IsoAgLibTutorialDisplay::TutorialDisplayTecu_c::TutorialDisplayTecu_c() :
-  mui8_countdownMaintainPower(0)
+IsoAgLibTutorialDisplay::TutorialDisplayTecu_c::TutorialDisplayTecu_c()
+  : iSchedulerTask_c(-1, false)
+  , mui8_countdownMaintainPower(0)
 {}
 
 IsoAgLibTutorialDisplay::TutorialDisplayTecu_c::~TutorialDisplayTecu_c() {}
 
 void IsoAgLibTutorialDisplay::TutorialDisplayTecu_c::init( IsoAgLib::iIdentItem_c* ap_ident ) {
-  IsoAgLib::getITracGeneralInstance().config( &( ap_ident->isoName() ), IsoAgLib::IdentModeImplement );
-  IsoAgLib::getITracMoveInstance().config( &( ap_ident->isoName() ), IsoAgLib::IdentModeImplement );
-  IsoAgLib::getITracPtoInstance().config( &( ap_ident->isoName() ), IsoAgLib::IdentModeImplement );
+  IsoAgLib::getITracGeneralInstance().config(  ap_ident, IsoAgLib::IdentModeImplement );
+  IsoAgLib::getITracMoveInstance().config(  ap_ident, IsoAgLib::IdentModeImplement );
+  IsoAgLib::getITracPtoInstance().config( ap_ident , IsoAgLib::IdentModeImplement );
 }
 
 void IsoAgLibTutorialDisplay::TutorialDisplayTecu_c::registerDisplay( iDisplay_c* ap_display ) {
@@ -36,11 +37,10 @@ void IsoAgLibTutorialDisplay::TutorialDisplayTecu_c::unRegisterDisplay( iDisplay
   }
 }
 
-bool IsoAgLibTutorialDisplay::TutorialDisplayTecu_c::timeEvent( void ) {
+void IsoAgLibTutorialDisplay::TutorialDisplayTecu_c::timeEvent( void ) {
   checkGeneralUpdate( false );
   checkMoveUpdate( false );
   checkPtoUpdate( false );
-  return true;
 }
 
 void IsoAgLibTutorialDisplay::TutorialDisplayTecu_c::close( void ) { }
@@ -106,8 +106,11 @@ void IsoAgLibTutorialDisplay::TutorialDisplayTecu_c::checkGeneralUpdate( bool ab
     // Check repeatedly if 500ms have passed:
     if (0 == mui8_countdownMaintainPower % 5) {
       // Check if more than 10 seconds remain to maintain power:
-      bool const cb_maintainActuatorPower = (mui8_countdownMaintainPower > 100);
-      IsoAgLib::getITracGeneralInstance().forceMaintainPower(true, cb_maintainActuatorPower, IsoAgLib::implInPark);
+      IsoAgLib::IsoActiveFlag_t cb_maintainActuatorPower = IsoAgLib::IsoInactive;
+      if (mui8_countdownMaintainPower > 100) {
+          cb_maintainActuatorPower = IsoAgLib::IsoActive;
+      }
+      IsoAgLib::getITracGeneralInstance().forceMaintainPower(IsoAgLib::IsoActive, cb_maintainActuatorPower);
     }
     --mui8_countdownMaintainPower;
   }

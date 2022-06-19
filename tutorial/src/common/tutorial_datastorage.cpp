@@ -3,17 +3,17 @@
  */
 
 #include <IsoAgLib/isoaglib_config.h>
-#include "tutorial_identdatastorage.h"
+#include "tutorial_datastorage.h"
 
 namespace IsoAgLibTutorial {
 
-  tutorialIdentDataStorage_c::tutorialIdentDataStorage_c(const uint16_t a_baseAddr) {
+  tutorialDataStorage_c::tutorialDataStorage_c(const uint16_t a_baseAddr) {
 #ifdef USE_EEPROM_IO
     mc_eeprom.init(a_baseAddr, m_eepromBlockSize, m_eepromMagicPattern);
 #endif
   }
 
-  uint8_t tutorialIdentDataStorage_c::_loadSa() {
+  uint8_t tutorialDataStorage_c::_loadSa() {
 #ifdef USE_EEPROM_IO
     uint8_t sa = m_defaultSa;
     if (mc_eeprom.valid() && mc_eeprom.read(m_eepromSaOffset, sa)) {
@@ -23,19 +23,19 @@ namespace IsoAgLibTutorial {
     return m_defaultSa;
   }
 
-  void tutorialIdentDataStorage_c::_storeSa(const uint8_t a_sa) {
+  void tutorialDataStorage_c::_storeSa(const uint8_t a_sa) {
 #ifdef USE_EEPROM_IO
     mc_eeprom.write(m_eepromSaOffset, a_sa);
     mc_eeprom.setValid();
 #endif
   }
 
-  void tutorialIdentDataStorage_c::_loadDtcs( IsoAgLib::iDtcContainer_c& /*arc_dtcContainer*/ )
+  void tutorialDataStorage_c::_loadDtcs( IsoAgLib::iDtcContainer_c& /*arc_dtcContainer*/ )
   {
     // @TODO load DTCs
   }
 
-  void tutorialIdentDataStorage_c::_storeDtcs( const IsoAgLib::iDtcContainer_c& /*arc_dtcContainer*/ )
+  void tutorialDataStorage_c::_storeDtcs( const IsoAgLib::iDtcContainer_c& /*arc_dtcContainer*/ )
   {
     // @TODO save DTCs
   }

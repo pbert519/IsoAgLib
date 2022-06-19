@@ -6,7 +6,7 @@
  */
 
 #include "tutorial_settings.h"
-#include "tutorial_identdatastorage.h"
+#include "tutorial_datastorage.h"
 
 // components
 #include "component_vtclient.h"
@@ -20,7 +20,7 @@
 
 
 IsoAgLib::iIdentItem_c* p_ident = 0;
-IsoAgLibTutorial::tutorialIdentDataStorage_c* p_identDataStorage = 0;
+IsoAgLibTutorial::tutorialDataStorage_c* p_dataStorage = 0;
 IsoAgLibTutorialDisplay::TutorialDisplay_c* p_display = 0;
 IsoAgLibTutorialDisplay::TutorialDisplayTecu_c* p_tecu = 0;
 IsoAgLibTutorialDisplay::TutorialDisplayTimePos_c* p_timepos = 0;
@@ -40,12 +40,12 @@ static const uint16_t scui16_eepromBaseAddress = 0x80;
 
 bool ecuMain() {
 
-  p_identDataStorage = new IsoAgLibTutorial::tutorialIdentDataStorage_c( scui16_eepromBaseAddress );
+  p_dataStorage = new IsoAgLibTutorial::tutorialDataStorage_c( scui16_eepromBaseAddress );
   p_tecu = new IsoAgLibTutorialDisplay::TutorialDisplayTecu_c();
   p_timepos = new IsoAgLibTutorialDisplay::TutorialDisplayTimePos_c();
   p_display = new IsoAgLibTutorialDisplay::TutorialDisplay_c();
 
-  if( ! p_display || ! p_timepos || ! p_tecu || ! p_identDataStorage ) {
+  if( ! p_display || ! p_timepos || ! p_tecu || ! p_dataStorage ) {
     return false;
   }
 
@@ -66,25 +66,22 @@ bool ecuMain() {
       scui8_funcInst,
       scui8_ecuInst );
 
-  p_ident->init( c_isoname, *p_identDataStorage, 0 , NULL, true );
+  p_ident->init( c_isoname, *p_dataStorage, 0 , NULL, true );
 
-  p_ident->setEcuIdentification( "PartNr D", "Serial 127", "Frontside", "Display", "OSB AG" ); // dummy values
+  p_ident->setEcuIdentification( "PartNr D", "Serial 127", "Frontside", "Display", "OSB AG", "HW Vers B0" ); // dummy values
   p_ident->setSwIdentification( "IsoAgLib Display ECU Tutorial*" );
   p_ident->setCertificationData(
     2009, // certification year
     IsoAgLib::CertificationRevisionNotAvailable,
     IsoAgLib::CertificationLabTypeNotAvailable,
     42, // dummy laboratory id
-    IsoAgLib::CertificationBitMask_t()
-      .setBit (IsoAgLib::CertificationVtWsMaster)
-      .setBit (IsoAgLib::CertificationMinEcu),
     8); // dummy reference number
 
   if ( ! IsoAgLib::getIisoMonitorInstance().registerIdentItem( *p_ident ) ) {
     return false;
   }
 
-  p_display->init( *p_ident );
+  p_display->init(*p_ident, p_dataStorage);
   p_tecu->init( p_ident );
   p_timepos->init( p_ident );
 
@@ -107,7 +104,7 @@ bool ecuShutdown() {
   IsoAgLib::getIisoMonitorInstance().deregisterIdentItem( *p_ident );
 
   delete p_ident;
-  delete p_identDataStorage;
+  delete p_dataStorage;
 
   if (!IsoAgLib::getIIsoBusInstance().close())
     return false;

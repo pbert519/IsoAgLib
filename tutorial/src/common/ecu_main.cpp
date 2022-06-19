@@ -11,6 +11,8 @@
 
 #include <IsoAgLib/scheduler/ischeduler_c.h>
 #include <IsoAgLib/util/iassert.h>
+#include "IsoAgLib/driver/system/isystem_c.h"
+
 #ifdef USE_EEPROM_IO
 #  include <supplementary_driver/driver/eeprom/ieepromio_c.h>
 #endif
@@ -42,11 +44,10 @@ void ecuMainLoop()
 
 int main( int /* argc */, char** /*argv*/ )
 {
-  /// Init Core-ISOAgLib (along with System)
-  if (!IsoAgLib::getISchedulerInstance().init()) {
-    isoaglib_assert (!"Couldn't initialize IsoAgLib (System/Scheduler).");
-    return EXIT_FAILURE;
-  }
+  HAL::openSystem();
+
+   /// Init Core-ISOAgLib (along with System)
+  IsoAgLib::getISchedulerInstance().init();
 
   /// Init Supplementary-ISOAgLib
   #ifdef USE_EEPROM_IO
@@ -72,7 +73,7 @@ int main( int /* argc */, char** /*argv*/ )
   }
 
   /// Keep it running...
-  while ( IsoAgLib::iSystem_c::canEn() )
+  while ( IsoAgLib::iSystem_c::switchedOn() )
     ecuMainLoop();
 
   /// Shutdown Application

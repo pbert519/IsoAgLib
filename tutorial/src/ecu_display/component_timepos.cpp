@@ -11,8 +11,8 @@
 
 /* reception of time pos data */
 IsoAgLibTutorialDisplay::TutorialDisplayTimePos_c::TutorialDisplayTimePos_c()
-{
-  setTimePeriod (250);
+        : iSchedulerTask_c(250, false) {
+
 }
 
 
@@ -20,14 +20,13 @@ IsoAgLibTutorialDisplay::TutorialDisplayTimePos_c::~TutorialDisplayTimePos_c() {
 
 /* iSchedulerTask_c */
 void IsoAgLibTutorialDisplay::TutorialDisplayTimePos_c::init( IsoAgLib::iIdentItem_c* ap_ident ) {
-  IsoAgLib::getITimePosGpsInstance().config( &( ap_ident->isoName() ), IsoAgLib::IdentModeImplement );
-  IsoAgLib::getITimePosGpsInstance().configGps( &( ap_ident->isoName() ), IsoAgLib::IdentModeImplement );
+  IsoAgLib::getITimePosGpsInstance().config(  ap_ident , IsoAgLib::IdentModeImplement );
+  IsoAgLib::getITimePosGpsInstance().configGps(  ap_ident , IsoAgLib::IdentModeImplement );
 }
 
-bool IsoAgLibTutorialDisplay::TutorialDisplayTimePos_c::timeEvent( void ) {
+void IsoAgLibTutorialDisplay::TutorialDisplayTimePos_c::timeEvent( void ) {
   checkTimeUpdate();
   checkPosUpdate();
-  return true;
 }
 
 void IsoAgLibTutorialDisplay::TutorialDisplayTimePos_c::registerDisplay( iDisplay_c* ap_display ) {

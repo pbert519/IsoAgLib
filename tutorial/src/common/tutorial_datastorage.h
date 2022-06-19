@@ -4,7 +4,7 @@
 
 #include <IsoAgLib/isoaglib_config.h>
 #include <IsoAgLib/comm/Part5_NetworkManagement/iidentitem_c.h>
-#include <IsoAgLib/comm/Part6_VirtualTerminal_Client/iisoterminal_c.h>
+#include <IsoAgLib/comm/Part6_VirtualTerminal_Client/ivtclient_c.h>
 
 #include "tutorial_eeprom.h"
 
@@ -16,7 +16,7 @@ namespace IsoAgLibTutorial {
       /** constructor with base address for eeprom usage
           @param a_baseAddr base address in eeprom to use
         */
-      explicit tutorialIdentDataStorage_c(const uint16_t a_baseAddr);
+      explicit tutorialDataStorage_c(const uint16_t a_baseAddr);
 
       //! method called by IsoAgLib to retrive a formerly stored source address
       uint8_t loadSa() override {

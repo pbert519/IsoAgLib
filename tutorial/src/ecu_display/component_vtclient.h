@@ -3,7 +3,7 @@
 
 #include <IsoAgLib/scheduler/ischedulertask_c.h>
 #include <IsoAgLib/comm/Part5_NetworkManagement/iidentitem_c.h>
-#include <IsoAgLib/comm/Part6_VirtualTerminal_Client/ivtclientservercommunication_c.h>
+#include <IsoAgLib/comm/Part6_VirtualTerminal_Client/ivtclientconnection_c.h>
 
 #include "component_vtclient_pool/tutorialDisplay_derived-h.h"
 
@@ -36,7 +36,7 @@ namespace IsoAgLibTutorialDisplay {
       TutorialDisplay_c();
       ~TutorialDisplay_c();
 
-      void init( IsoAgLib::iIdentItem_c& ar_ident );
+      void init(IsoAgLib::iIdentItem_c &ar_ident, IsoAgLib::iVtClientDataStorage_c *pC);
 
       //! Initializes run-time MetaInformation for this ECU
       void setMetaInfo();
@@ -62,7 +62,7 @@ namespace IsoAgLibTutorialDisplay {
       virtual void handleNewPto( int32_t ai_ptoFront, bool ab_frontEngaged, int32_t ai_ptoRear, bool ab_rearEngaged );
 
     private:
-      IsoAgLib::iVtClientServerCommunication_c* mp_srcHandle;
+      IsoAgLib::iVtClientConnection_c* mp_srcHandle;
       IsoAgLib::iIdentItem_c* mp_srcIdent;
 
       uint16_t mui_activeMaskId;

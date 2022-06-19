@@ -5,6 +5,7 @@
  * receiving events from it and updating of values on it.
  */
 
+#include <tutorial_datastorage.h>
 #include "tutorial_settings.h"
 #include "component_vtclient.h"
 
@@ -68,15 +69,15 @@ TutorialDisplay_c::~TutorialDisplay_c()
 {
   if (mp_srcIdent)
   { // registered, so we need to deregister
-    IsoAgLib::getIisoTerminalInstance().deregisterIsoObjectPool( *mp_srcIdent );
+    IsoAgLib::getIvtClientInstance().deregisterObjectPool( *mp_srcIdent );
   }
 }
 
 
 void
-TutorialDisplay_c::init( IsoAgLib::iIdentItem_c& ar_ident )
+TutorialDisplay_c::init(IsoAgLib::iIdentItem_c &ar_ident, IsoAgLib::iVtClientDataStorage_c *pC)
 {
-  mp_srcHandle = IsoAgLib::getIisoTerminalInstance().initAndRegisterIsoObjectPool( ar_ident, *this, NULL );
+  mp_srcHandle = IsoAgLib::getIvtClientInstance().initAndRegisterObjectPool( ar_ident, *this, NULL , *pC, RegisterPoolMode_MasterToAnyVt);
   if (mp_srcHandle)
   { // registering succeeded, store IdentItem for deregistration
     mp_srcIdent = &ar_ident;
@@ -114,7 +115,7 @@ TutorialDisplay_c::eventVtStatusMsg()
   //! This function is needed to keep track of the active mask
   //! as it is changed via Macros in this somponent's objectpool.
   if ( 0 != mp_srcHandle ) {
-    const uint16_t amId = mp_srcHandle->getVtServerInst().getVtState()->dataAlarmMask;
+    const uint16_t amId = mp_srcHandle->getVtServerInst().getVtState().dataAlarmMask;
     if ( amId != mui_activeMaskId )
     { // a (macro-triggered) mask change has been detected
       maskChanged( amId );

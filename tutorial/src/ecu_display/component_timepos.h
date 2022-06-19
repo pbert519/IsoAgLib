@@ -21,7 +21,7 @@ namespace IsoAgLibTutorialDisplay {
       void unRegisterDisplay( iDisplay_c* ap_display );
 
       /* iSchedulerTask_c */
-      virtual bool timeEvent( void );
+      virtual void timeEvent( void );
       virtual void close( void );
       virtual const char* getTaskName() const;
 

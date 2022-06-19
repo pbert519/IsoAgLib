@@ -1,0 +1,2 @@
+IsoAgLib::iVtObjectEllipse_c iVtObjectelStateGreen;
+IsoAgLib::iVtObjectEllipse_c iVtObjectelStateRed;

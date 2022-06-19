@@ -1,0 +1,2 @@
+IsoAgLib::iVtObjectArchedBarGraph_c iVtObjectabgSpeed;
+IsoAgLib::iVtObjectArchedBarGraph_c iVtObjectabgHitch;

@@ -1,4 +1,4 @@
-IsoAgLib::iVtObject_c* HUGE_MEM all_iVtObjects0 [] = {
+IsoAgLib::iVtObject_c* const HUGE_MEM all_iVtObjects0 [] = {
  &iVtObjectosBuildDateLabel,
  &iVtObjectosTutorialVersionLabel,
  &iVtObjectosIsoAgLibVersionLabel,

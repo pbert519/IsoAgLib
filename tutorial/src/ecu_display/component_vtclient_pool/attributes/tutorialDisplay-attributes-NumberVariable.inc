@@ -1,0 +1,14 @@
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvHitchAngle_sROM = {21000, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvHitchAngleTarget_sROM = {21001, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvSpeedTheor_sROM = {65476, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvDistTheor_sROM = {65477, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvMaxPowerTime_sROM = {65478, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvDistReal_sROM = {65479, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvSpeedReal_sROM = {65482, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvPtoRear_sROM = {65485, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvPtoFront_sROM = {65488, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvSec_sROM = {65508, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvMin_sROM = {65509, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvHr_sROM = {65514, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvLon_sROM = {65525, 0UL};
+const IsoAgLib::iVtObject_c::iVtObjectNumberVariable_s iVtObjectnvLat_sROM = {65526, 0UL};

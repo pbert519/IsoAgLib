@@ -1,0 +1,1 @@
+IsoAgLib::iVtObjectButton_c iVtObjectbtnHitchSetCurTrgt;

@@ -1,0 +1,11 @@
+IsoAgLib::iVtObjectRectangle_c iVtObjectrctHitch;
+IsoAgLib::iVtObjectRectangle_c iVtObjectrctSpeed;
+IsoAgLib::iVtObjectRectangle_c iVtObjectrctIsoAgLibVersion;
+IsoAgLib::iVtObjectRectangle_c iVtObjectrctTutorialVersion;
+IsoAgLib::iVtObjectRectangle_c iVtObjectrctPto;
+IsoAgLib::iVtObjectRectangle_c iVtObjectrctMaxPower;
+IsoAgLib::iVtObjectRectangle_c iVtObjectrctKeySwitch;
+IsoAgLib::iVtObjectRectangle_c iVtObjectrctDistReal;
+IsoAgLib::iVtObjectRectangle_c iVtObjectrctBuildDate;
+IsoAgLib::iVtObjectRectangle_c iVtObjectrctTime;
+IsoAgLib::iVtObjectRectangle_c iVtObjectrecLogoFrame;

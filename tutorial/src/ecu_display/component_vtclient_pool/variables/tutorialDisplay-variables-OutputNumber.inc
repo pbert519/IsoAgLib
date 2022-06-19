@@ -1,0 +1,11 @@
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectopnHitchTargetAngle;
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectonTimeS;
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectonDistReal;
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectonSpeedReal;
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectonPtoRear;
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectonPtoFront;
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectonMaxPowerTime;
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectonTimeM;
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectonTimeH;
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectonLon;
+IsoAgLib::iVtObjectOutputNumber_c iVtObjectonLat;

@@ -1,0 +1,7 @@
+IsoAgLib::iVtObjectPictureGraphic_c iVtObjectpicWindrose;
+IsoAgLib::iVtObjectPictureGraphic_c iVtObjectpicIsoAgLib;
+IsoAgLib::iVtObjectPictureGraphic_c iVtObjectpicHitch;
+IsoAgLib::iVtObjectPictureGraphic_c iVtObjectpicSpeed;
+IsoAgLib::iVtObjectPictureGraphic_c iVtObjectpicKeyNavTecu;
+IsoAgLib::iVtObjectPictureGraphic_c iVtObjectpicKeyNavTimePos;
+IsoAgLib::iVtObjectPictureGraphic_c iVtObjectpicKeyNavAbout;

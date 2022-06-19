@@ -1,0 +1,14 @@
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvHitchAngle;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvHitchAngleTarget;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvSpeedTheor;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvDistTheor;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvMaxPowerTime;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvDistReal;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvSpeedReal;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvPtoRear;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvPtoFront;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvSec;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvMin;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvHr;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvLon;
+IsoAgLib::iVtObjectNumberVariable_c iVtObjectnvLat;

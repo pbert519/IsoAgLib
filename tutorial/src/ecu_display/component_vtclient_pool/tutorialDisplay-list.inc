@@ -1,4 +1,4 @@
-IsoAgLib::iVtObject_c* HUGE_MEM all_iVtObjects [] = {
+IsoAgLib::iVtObject_c* const HUGE_MEM all_iVtObjects [] = {
  &iVtObjectwsTutorialDisplay,
  &iVtObjectmacroChangeMaskAbout,
  &iVtObjectmacroChangeMaskTecu,
@@ -131,7 +131,7 @@ IsoAgLib::iVtObject_c* HUGE_MEM all_iVtObjects [] = {
  &iVtObjectlnSolidBlack
 };
 
-IsoAgLib::iVtObject_c* HUGE_MEM * all_iVtObjectLists [] = {
+extern IsoAgLib::iVtObject_c* const HUGE_MEM * const all_iVtObjectLists [] = {
   all_iVtObjects,
   all_iVtObjects0,
   all_iVtObjects1,

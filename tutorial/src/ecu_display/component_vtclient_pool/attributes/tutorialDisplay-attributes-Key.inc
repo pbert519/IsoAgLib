@@ -1,0 +1,9 @@
+const IsoAgLib::repeat_iVtObject_x_y_iVtObjectFontAttributes_row_col_s iVtObjectkeyNavTECU_aObject_x_y_font_row_col [] = {{&iVtObjectpicKeyNavTecu, 10, 4, NULL ,0, 0}};
+const IsoAgLib::repeat_event_iVtObjectMacro_s iVtObjectkeyNavTECU_aMacro_Object [] = {{24, &iVtObjectmacroChangeMaskTecu}};
+const IsoAgLib::iVtObject_c::iVtObjectKey_s iVtObjectkeyNavTECU_sROM = {65513, 1, 254, 1, iVtObjectkeyNavTECU_aObject_x_y_font_row_col, 1,iVtObjectkeyNavTECU_aMacro_Object};
+const IsoAgLib::repeat_iVtObject_x_y_iVtObjectFontAttributes_row_col_s iVtObjectkeyNavTimePos_aObject_x_y_font_row_col [] = {{&iVtObjectpicKeyNavTimePos, 11, 6, NULL ,0, 0}};
+const IsoAgLib::repeat_event_iVtObjectMacro_s iVtObjectkeyNavTimePos_aMacro_Object [] = {{24, &iVtObjectmacroChangeMaskTimePos}};
+const IsoAgLib::iVtObject_c::iVtObjectKey_s iVtObjectkeyNavTimePos_sROM = {65515, 1, 255, 1, iVtObjectkeyNavTimePos_aObject_x_y_font_row_col, 1,iVtObjectkeyNavTimePos_aMacro_Object};
+const IsoAgLib::repeat_iVtObject_x_y_iVtObjectFontAttributes_row_col_s iVtObjectkeyNavAbout_aObject_x_y_font_row_col [] = {{&iVtObjectpicKeyNavAbout, 10, 5, NULL ,0, 0}};
+const IsoAgLib::repeat_event_iVtObjectMacro_s iVtObjectkeyNavAbout_aMacro_Object [] = {{24, &iVtObjectmacroChangeMaskAbout}};
+const IsoAgLib::iVtObject_c::iVtObjectKey_s iVtObjectkeyNavAbout_sROM = {65523, 1, 252, 1, iVtObjectkeyNavAbout_aObject_x_y_font_row_col, 1,iVtObjectkeyNavAbout_aMacro_Object};

@@ -1,0 +1,2 @@
+IsoAgLib::iVtObjectLinearBarGraph_c iVtObjectlbPtoRear;
+IsoAgLib::iVtObjectLinearBarGraph_c iVtObjectlbPtoFront;

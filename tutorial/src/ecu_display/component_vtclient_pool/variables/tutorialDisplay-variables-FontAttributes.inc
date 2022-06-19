@@ -1,0 +1,3 @@
+IsoAgLib::iVtObjectFontAttributes_c iVtObjectfta6x8;
+IsoAgLib::iVtObjectFontAttributes_c iVtObjectfta8x12_SK;
+IsoAgLib::iVtObjectFontAttributes_c iVtObjectfta8x8;

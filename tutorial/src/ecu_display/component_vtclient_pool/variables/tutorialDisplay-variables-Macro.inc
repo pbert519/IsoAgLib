@@ -1,0 +1,3 @@
+IsoAgLib::iVtObjectMacro_c iVtObjectmacroChangeMaskAbout;
+IsoAgLib::iVtObjectMacro_c iVtObjectmacroChangeMaskTecu;
+IsoAgLib::iVtObjectMacro_c iVtObjectmacroChangeMaskTimePos;

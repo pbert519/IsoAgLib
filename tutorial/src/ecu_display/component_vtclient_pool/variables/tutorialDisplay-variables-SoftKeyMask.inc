@@ -1,0 +1,1 @@
+IsoAgLib::iVtObjectSoftKeyMask_c iVtObjectskmDisplay;

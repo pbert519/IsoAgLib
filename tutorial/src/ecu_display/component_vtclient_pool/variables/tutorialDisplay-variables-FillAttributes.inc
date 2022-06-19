@@ -1,0 +1,4 @@
+IsoAgLib::iVtObjectFillAttributes_c iVtObjectflaContentBg;
+IsoAgLib::iVtObjectFillAttributes_c iVtObjectflaFalse;
+IsoAgLib::iVtObjectFillAttributes_c iVtObjectflaOk;
+IsoAgLib::iVtObjectFillAttributes_c iVtObjectflaLogo;

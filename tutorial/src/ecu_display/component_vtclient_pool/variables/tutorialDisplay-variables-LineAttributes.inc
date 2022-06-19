@@ -1,0 +1,1 @@
+IsoAgLib::iVtObjectLineAttributes_c iVtObjectlnSolidBlack;

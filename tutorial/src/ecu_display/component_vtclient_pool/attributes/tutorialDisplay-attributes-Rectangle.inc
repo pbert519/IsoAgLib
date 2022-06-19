@@ -1,0 +1,11 @@
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrctHitch_sROM = {14000, &iVtObjectlnSolidBlack, 97, 83, 0, &iVtObjectflaContentBg, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrctSpeed_sROM = {14001, &iVtObjectlnSolidBlack, 97, 83, 0, &iVtObjectflaContentBg, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrctIsoAgLibVersion_sROM = {14002, &iVtObjectlnSolidBlack, 192, 20, 0, &iVtObjectflaContentBg, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrctTutorialVersion_sROM = {14003, &iVtObjectlnSolidBlack, 192, 20, 0, &iVtObjectflaContentBg, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrctPto_sROM = {14004, &iVtObjectlnSolidBlack, 197, 28, 0, &iVtObjectflaContentBg, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrctMaxPower_sROM = {14005, &iVtObjectlnSolidBlack, 197, 13, 0, &iVtObjectflaContentBg, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrctKeySwitch_sROM = {14006, &iVtObjectlnSolidBlack, 197, 13, 0, &iVtObjectflaContentBg, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrctDistReal_sROM = {14007, &iVtObjectlnSolidBlack, 197, 13, 0, &iVtObjectflaContentBg, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrctBuildDate_sROM = {14008, &iVtObjectlnSolidBlack, 192, 20, 0, &iVtObjectflaContentBg, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrctTime_sROM = {14009, &iVtObjectlnSolidBlack, 192, 20, 0, &iVtObjectflaContentBg, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectRectangle_s iVtObjectrecLogoFrame_sROM = {65518, &iVtObjectlnSolidBlack, 200, 33, 0, &iVtObjectflaLogo, 0,NULL};

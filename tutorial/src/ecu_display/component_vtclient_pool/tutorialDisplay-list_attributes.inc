@@ -1,4 +1,4 @@
-IsoAgLib::iVtObject_c::iVtObject_s* HUGE_MEM all_sROMs [] = {
+extern IsoAgLib::iVtObject_c::iVtObject_s* const HUGE_MEM all_sROMs [] = {
  (IsoAgLib::iVtObject_c::iVtObject_s*)&iVtObjectwsTutorialDisplay_sROM,
  (IsoAgLib::iVtObject_c::iVtObject_s*)&iVtObjectmacroChangeMaskAbout_sROM,
  (IsoAgLib::iVtObject_c::iVtObject_s*)&iVtObjectmacroChangeMaskTecu_sROM,

@@ -1,0 +1,11 @@
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectopnHitchTargetAngle_sROM = {12001, 18, 10, 1, &iVtObjectfta6x8, 1, &iVtObjectnvHitchAngleTarget, 0UL, -45L, 1.f, 0, 0, 2, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectonTimeS_sROM = {65471, 20, 10, 1, &iVtObjectfta6x8, 1, &iVtObjectnvSec, 0UL, 0L, 1.f, 0, 0, 1, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectonDistReal_sROM = {65480, 40, 9, 1, &iVtObjectfta6x8, 1, &iVtObjectnvDistReal, 0UL, 0L, 1.f, 0, 0, 2, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectonSpeedReal_sROM = {65483, 20, 10, 1, &iVtObjectfta6x8, 1, &iVtObjectnvSpeedReal, 0UL, 0L, 1.f, 0, 0, 0, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectonPtoRear_sROM = {65486, 25, 10, 1, &iVtObjectfta6x8, 1, &iVtObjectnvPtoRear, 0UL, 0L, 1.f, 0, 0, 2, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectonPtoFront_sROM = {65489, 25, 10, 1, &iVtObjectfta6x8, 1, &iVtObjectnvPtoFront, 0UL, 0L, 1.f, 0, 0, 2, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectonMaxPowerTime_sROM = {65502, 40, 10, 1, &iVtObjectfta6x8, 1, &iVtObjectnvMaxPowerTime, 0UL, 0L, 1.f, 0, 0, 2, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectonTimeM_sROM = {65505, 20, 10, 1, &iVtObjectfta6x8, 1, &iVtObjectnvMin, 0UL, 0L, 1.f, 0, 0, 1, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectonTimeH_sROM = {65524, 20, 10, 1, &iVtObjectfta6x8, 1, &iVtObjectnvHr, 0UL, 0L, 1.f, 0, 0, 1, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectonLon_sROM = {65527, 60, 10, 1, &iVtObjectfta6x8, 1, &iVtObjectnvLon, 0UL, 0L, 1.f, 0, 0, 2, 0,NULL};
+const IsoAgLib::iVtObject_c::iVtObjectOutputNumber_s iVtObjectonLat_sROM = {65529, 50, 10, 1, &iVtObjectfta6x8, 1, &iVtObjectnvLat, 0UL, 0L, 1.f, 0, 0, 0, 0,NULL};
